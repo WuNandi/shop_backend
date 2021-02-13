@@ -8,7 +8,7 @@ import Roles from '../components/power/Roles.vue'
 import Rights from '../components/power/Rights.vue'
 import Goods from '../components/Goods.vue'
 import Params from '../components/Params.vue'
-import Categories from '../components/Categories.vue'
+import Cate from '../components/goods/Cate.vue'
 import Orders from '../components/Orders.vue'
 import Reports from '../components/Reports.vue'
 
@@ -56,7 +56,7 @@ const routes = [
       {
         // 商品分类
         path: '/categories',
-        component: Categories
+        component: Cate
       },
       {
         // 订单列表

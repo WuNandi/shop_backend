@@ -28,7 +28,8 @@ import {
   Tag,
   Tree,
   Select,
-  Option
+  Option,
+  Cascader
 } from 'element-ui'
 
 // 注册全局组件
@@ -59,5 +60,8 @@ Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)
+// 消息弹窗组件
 Vue.prototype.$message = Message
+// 确认消息对话框
 Vue.prototype.$confirm = MessageBox.confirm
