@@ -6,7 +6,8 @@ import Welcome from '../components/Welcome.vue'
 import Users from '../components/users/Users.vue'
 import Roles from '../components/power/Roles.vue'
 import Rights from '../components/power/Rights.vue'
-import Goods from '../components/Goods.vue'
+import List from '../components/goods/List.vue'
+import Add from '../components/goods/Add.vue'
 import Params from '../components/goods/Params.vue'
 import Cate from '../components/goods/Cate.vue'
 import Orders from '../components/Orders.vue'
@@ -46,7 +47,12 @@ const routes = [
       {
         // 商品列表
         path: '/goods',
-        component: Goods
+        component: List
+      },
+      {
+        // 添加商品页
+        path: '/goods/add',
+        component: Add
       },
       {
         // 分类参数
