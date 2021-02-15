@@ -1,17 +1,34 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+// 路由懒加载
 import Login from '../components/Login.vue'
+const Login = () => import(/* webpackChunkName: "login_home_welcome" */ '../components/Login.vue')
 import Home from '../components/Home.vue'
+const Home = () => import(/* webpackChunkName: "login_home_welcome" */ '../components/Home.vue')
 import Welcome from '../components/Welcome.vue'
+const Welcome = () => import(/* webpackChunkName: "login_home_welcome" */ '../components/Welcome.vue')
+
 import Users from '../components/users/Users.vue'
-import Roles from '../components/power/Roles.vue'
+const Users = () => import(/* webpackChunkName: "users_rights_roles" */ '../components/Users.vue')
 import Rights from '../components/power/Rights.vue'
-import List from '../components/goods/List.vue'
-import Add from '../components/goods/Add.vue'
+const Rights = () => import(/* webpackChunkName: "users_rights_roles" */ '../components/Rights.vue')
+import Roles from '../components/power/Roles.vue'
+const Welcome = () => import(/* webpackChunkName: "users_rights_roles" */ '../components/Roles.vue')
+
 import Params from '../components/goods/Params.vue'
+const Params = () => import(/* webpackChunkName: "params_cate" */ '../components/Params.vue')
 import Cate from '../components/goods/Cate.vue'
+const Welcome = () => import(/* webpackChunkName: "params_cate" */ '../components/Cate.vue')
+
+import GoodsList from '../components/goods/List.vue'
+const GoodsList = () => import(/* webpackChunkName: "goodsList_add" */ '../components/GoodsList.vue')
+import Add from '../components/goods/Add.vue'
+const Add = () => import(/* webpackChunkName: "goodsList_add" */ '../components/Add.vue')
+
 import Orders from '../components/order/Orders.vue'
+const Orders = () => import(/* webpackChunkName: "orders_report" */ '../components/Orders.vue')
 import Report from '../components/report/Report.vue'
+const Report = () => import(/* webpackChunkName: "orders_report" */ '../components/Report.vue')
 
 Vue.use(VueRouter)
 
@@ -47,7 +64,7 @@ const routes = [
       {
         // 商品列表
         path: '/goods',
-        component: List
+        component: GoodsList
       },
       {
         // 添加商品页

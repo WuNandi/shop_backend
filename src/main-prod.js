@@ -2,22 +2,30 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueQuillEditor from 'vue-quill-editor'
-import './plugins/element.js'
+// import './plugins/element.js'
 import './assets/fonts/iconfont.css'
 import TreeTable from 'vue-table-with-tree-grid'
 // 导入全局样式
 import './assets/css/global.css'
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
 // 导入axios
 import axios from 'axios'
+// 导入Nprogress
+import NProgress from 'nprogress'
 
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 
+// axios request拦截器
 axios.interceptors.request.use(config => {
+  // 进度条开始
+  NProgress.start()
   config.headers.Authorization = window.sessionStorage.getItem('token')
   // console.log(config)
+  return config
+})
+// axios response拦截器
+axios.interceptors.response.use(config => {
+  // 进度条完成
+  NProgress.done()
   return config
 })
 // 注册富文本编辑器
