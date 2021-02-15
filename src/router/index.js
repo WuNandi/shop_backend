@@ -11,7 +11,7 @@ import Add from '../components/goods/Add.vue'
 import Params from '../components/goods/Params.vue'
 import Cate from '../components/goods/Cate.vue'
 import Orders from '../components/order/Orders.vue'
-import Reports from '../components/Reports.vue'
+import Report from '../components/report/Report.vue'
 
 Vue.use(VueRouter)
 
@@ -72,7 +72,7 @@ const routes = [
       {
         // 数据报表
         path: '/reports',
-        component: Reports
+        component: Report
       }
     ]
   }
