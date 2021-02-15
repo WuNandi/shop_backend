@@ -1,24 +1,30 @@
-# shop_backend
+# 一些已知的bugs和要添加的功能
 
-## Project setup
-```
-npm install
-```
+## 需添加的功能
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+欢迎界面的开发
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 角色列表
 
-### Lints and fixes files
-```
-npm run lint
-```
+   - 添加角色功能
+   - 生产环境下角色列表没有正常渲染
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 商品分类
+
+   - 生产环境下添加分类按钮失效
+   - 父级分类数据完整
+
+### 订单列表
+
+   - 添加订单按钮功能
+   - 操作栏没有编辑和查看物流按钮
+
+### 参数列表
+
+    - 添加参数提示信息完善
+
+### 其他
+
+- 图标与颜色主题的更换
+- 校验规则的提示信息矫正
+- 级联菜单没悬停触发
